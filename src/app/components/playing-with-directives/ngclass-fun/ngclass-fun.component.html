@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h3>{{title}}</h3>
+        </mat-card-title>
+        <p [ngClass]="classname">Este card foi criado para explorar a utilização da diretiva <b>ngClass</b>. Por meio
+            desta diretiva, é possível alterar as classes associadas a um elemento. Selecione abaixo a nova classe para
+            observar as alterações.</p>
+        <mat-form-field>
+            <mat-select placeholder="Selecione uma classe:" name="select-class" [(ngModel)]="classname">
+                <mat-option value="novacor">
+                    Nova Cor
+                </mat-option>
+                <mat-option value="novotamanho">
+                    Novo Tamanho
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
