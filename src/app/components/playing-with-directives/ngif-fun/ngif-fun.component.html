@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h3>{{title}}</h3>
+        </mat-card-title>
+        <p [ngClass]="classname">Este card foi criado para explorar a utilização da diretiva <b>NgIf</b>. Foi mantido o
+            modelo de seleção de classes utilizado no card NgClass e a geração dinâmica de opções de classe do NgFor,
+            mas acrescentei a diretiva NgIf para definir se o seletor de classes deve ou não ser exibido.</p>
+        <mat-checkbox [(ngModel)]="selectStatus">
+            Exibir Seletor
+        </mat-checkbox>
+        <br>
+        <mat-form-field *ngIf="selectStatus">
+            <mat-select placeholder="Selecione uma classe:" name="select-class" [(ngModel)]="classname">
+                <mat-option *ngFor="let class of classes, let i = index" [value]="class.value">
+                    {{class.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
