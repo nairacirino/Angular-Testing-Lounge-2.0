@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h3>{{title}}</h3>
+        </mat-card-title>
+        <p [ngStyle]="{fontSize: fontSize, color: fontColor}">Este card foi criado para explorar a utilização da diretiva <b>NgStyle</b>. Por meio
+            desta diretiva, é possível alterar estilos associadas a um elemento. Selecione abaixo entre as opções de estilo para
+            observar as alterações.</p>
+        <mat-form-field>
+            <mat-label>Tamanho de Fonte</mat-label>
+            <mat-select placeholder="Selecione um tamanho:" name="select-size" [(ngModel)]="fontSize">
+                <mat-option *ngFor="let fontSizeOption of fontSizeOptions" [value]="fontSizeOption">
+                    {{fontSizeOption}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Cor de Fonte</mat-label>
+            <mat-select placeholder="Selecione uma cor:" name="select-color" [(ngModel)]="fontColor">
+                <mat-option *ngFor="let fontColorOption of fontColorOptions" [value]="fontColorOption">
+                    {{fontColorOption}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
