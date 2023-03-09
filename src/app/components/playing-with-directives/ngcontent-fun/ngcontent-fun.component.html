@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h3>{{title}}</h3>
+        </mat-card-title>
+        <ng-content></ng-content>
+        <mat-form-field>
+            <mat-select placeholder="Escolha para exibir:" name="select-class" [(ngModel)]="selectedtype">
+                <mat-option *ngFor="let type of types" [value]="type">
+                    {{type}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="products-display">
+            <ng-container *ngFor="let product of products">
+                <mat-card class="example-card" *ngIf="product.type == selectedtype">
+                    <mat-card-header>
+                        <mat-card-title>{{product.product}}</mat-card-title>
+                        <mat-card-subtitle>{{product.description}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{product.imgsrc}}" alt="{{product.imgalt}}">
+                </mat-card>
+            </ng-container>
+        </div>
+    </mat-card-content>
+</mat-card>
