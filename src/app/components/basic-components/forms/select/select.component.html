@@ -1,5 +1,5 @@
 <mat-form-field>
-    <mat-select placeholder="Escolha para exibir:" name="select-class" [(ngModel)]="selectedOption">
+    <mat-select placeholder="Escolha para exibir:" name="select-class" [(ngModel)]="selectedOption" (selectionChange)="sendSelected()">
         <mat-option *ngFor="let option of options" [value]="option">
             {{option}}
         </mat-option>

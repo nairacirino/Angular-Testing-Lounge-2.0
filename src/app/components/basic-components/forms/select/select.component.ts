@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -8,6 +8,12 @@ import { Component, Input, Output } from '@angular/core';
 export class SelectComponent {
 
   @Input() options: any[];
-  @Input() selectedOption: any;
+  @Output() sendSelectedValue = new EventEmitter<any>();
+
+  selectedOption: any;
+
+  sendSelected() {
+    this.sendSelectedValue.emit();
+  }
 
 }
