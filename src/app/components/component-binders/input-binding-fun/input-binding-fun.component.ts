@@ -45,8 +45,4 @@ export class InputBindingFunComponent implements OnInit {
       imgalt: "Photo of a Pancake",
     }
   ]
-
-  print() {
-    console.log(this.selectedtype)
-  }
 }
