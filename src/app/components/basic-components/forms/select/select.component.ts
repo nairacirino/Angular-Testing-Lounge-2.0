@@ -13,7 +13,7 @@ export class SelectComponent {
   selectedOption: any;
 
   sendSelected() {
-    this.sendSelectedValue.emit();
+    this.sendSelectedValue.emit(this.selectedOption);
   }
 
 }
