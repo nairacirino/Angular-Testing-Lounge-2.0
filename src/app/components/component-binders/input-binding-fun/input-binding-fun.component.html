@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h3>{{title}}</h3>
+        </mat-card-title>
+        <p>Componente criado para utilizar Input Binding para exibir cards criados a partir de outro componente. Utilize
+            a seleção abaixo para filtrar com a diretiva NgIf os cards exibidos dinamicamente por meio da diretiva
+            NgFor.</p>
+        <mat-form-field>
+            <mat-select placeholder="Escolha para exibir:" name="select-class" [(ngModel)]="selectedtype">
+                <mat-option *ngFor="let option of types" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="products-display">
+            <ng-container *ngFor="let product of products">
+                <app-card1 class="example-card" *ngIf="product.type == selectedtype" [cardTitle]="product.product"
+                    [cardDescription]="product.description" [cardImgSrc]="product.imgsrc" [cardImgAlt]="product.imgalt">
+                </app-card1>
+            </ng-container>
+        </div>
+    </mat-card-content>
+</mat-card>
