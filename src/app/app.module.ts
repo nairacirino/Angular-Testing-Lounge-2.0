@@ -20,6 +20,14 @@ import { NgswitchFunComponent } from './components/playing-with-directives/ngswi
 import { NgtemplateFunComponent } from './components/playing-with-directives/ngtemplate-fun/ngtemplate-fun.component';
 import { NgcontainerFunComponent } from './components/playing-with-directives/ngcontainer-fun/ngcontainer-fun.component';
 import { NgcontentFunComponent } from './components/playing-with-directives/ngcontent-fun/ngcontent-fun.component';
+import { DirectivesFunComponent } from './components/playing-with-directives/directives-fun.component';
+import { CardsComponent } from './components/basic-components/cards/cards.component';
+import { Card1Component } from './components/basic-components/cards/card1/card1.component';
+import { ComponentBindersComponent } from './components/component-binders/component-binders.component';
+import { InputBindingFunComponent } from './components/component-binders/input-binding-fun/input-binding-fun.component';
+import { FormsComponent } from './components/basic-components/forms/forms.component';
+import { SelectComponent } from './components/basic-components/forms/select/select.component';
+import { EventEmitterFunComponent } from './components/component-binders/event-emitter-fun/event-emitter-fun.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,15 @@ import { NgcontentFunComponent } from './components/playing-with-directives/ngco
     NgswitchFunComponent,
     NgtemplateFunComponent,
     NgcontainerFunComponent,
-    NgcontentFunComponent
+    NgcontentFunComponent,
+    DirectivesFunComponent,
+    CardsComponent,
+    Card1Component,
+    ComponentBindersComponent,
+    InputBindingFunComponent,
+    FormsComponent,
+    SelectComponent,
+    EventEmitterFunComponent
   ],
   imports: [
     BrowserModule,
