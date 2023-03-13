@@ -1,0 +1,14 @@
+<mat-card>
+    <div class="products-display">
+        <app-product-card class="example-card" *ngFor="let product of products" 
+        [cardTitle]="product.title"
+        [cardDescription]="product.description" 
+        [cardImgSrc]="product.imgSrc" 
+        [cardImgAlt]="product.imgAlt"
+        [price]="product.price"
+        (sendDeleteCard)="deleteIt()"
+        (sendEditCard)="editIt()"
+        >
+        </app-product-card>
+    </div>
+</mat-card>
