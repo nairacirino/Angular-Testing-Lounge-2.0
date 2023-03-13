@@ -10,6 +10,13 @@
 }
 
 .example-card {
+    max-width: 90%;
+    min-width: 80%;
+}
+
+@media (min-width: 700px) {
+.example-card {
     max-width: 45%;
     min-width: 40%;
+}
 }
