@@ -9,6 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 //Components
 import { AppComponent } from './app.component';
@@ -28,6 +29,9 @@ import { InputBindingFunComponent } from './components/component-binders/input-b
 import { FormsComponent } from './components/basic-components/forms/forms.component';
 import { SelectComponent } from './components/basic-components/forms/select/select.component';
 import { EventEmitterFunComponent } from './components/component-binders/event-emitter-fun/event-emitter-fun.component';
+import { MiniProjectsComponent } from './components/mini-projects/mini-projects.component';
+import { ProductsGalleryComponent } from './components/mini-projects/products-gallery/products-gallery.component';
+import { ProductCardComponent } from './components/basic-components/cards/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,10 @@ import { EventEmitterFunComponent } from './components/component-binders/event-e
     InputBindingFunComponent,
     FormsComponent,
     SelectComponent,
-    EventEmitterFunComponent
+    EventEmitterFunComponent,
+    MiniProjectsComponent,
+    ProductsGalleryComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +64,8 @@ import { EventEmitterFunComponent } from './components/component-binders/event-e
     FormsModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
