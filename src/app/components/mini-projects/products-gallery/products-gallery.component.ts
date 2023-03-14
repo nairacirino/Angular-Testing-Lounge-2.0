@@ -97,10 +97,10 @@ export class ProductsGalleryComponent {
   ]
 
   deleteIt() {
-    console.log("binding works")
+    console.log("binding delete works")
   }
 
   editIt() {
-    console.log("binding works")
+    console.log("binding edit works")
   }
 }

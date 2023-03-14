@@ -7,10 +7,12 @@
     <mat-card-content>
         <p>R$ {{price}}</p>
     </mat-card-content>
-    <button mat-icon-button (click)="sendEdit()">
-        <mat-icon>mode_edit</mat-icon>
-    </button>
-    <button mat-icon-button>
-        <mat-icon (click)="sendDelete()">delete_forever</mat-icon>
-    </button>
+    <app-icon-button
+    [icon]="'mode_edit'"
+    (sendClickEmitter)="sendEdit()"
+    ></app-icon-button>
+    <app-icon-button
+    [icon]="'delete_forever'"
+    (sendClickEmitter)="sendDelete()"
+    ></app-icon-button>
 </mat-card>
