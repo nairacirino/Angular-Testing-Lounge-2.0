@@ -32,6 +32,8 @@ import { EventEmitterFunComponent } from './components/component-binders/event-e
 import { MiniProjectsComponent } from './components/mini-projects/mini-projects.component';
 import { ProductsGalleryComponent } from './components/mini-projects/products-gallery/products-gallery.component';
 import { ProductCardComponent } from './components/basic-components/cards/product-card/product-card.component';
+import { ButtonsComponent } from './components/basic-components/buttons/buttons.component';
+import { IconButtonComponent } from './components/basic-components/buttons/icon-button/icon-button.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { ProductCardComponent } from './components/basic-components/cards/produc
     EventEmitterFunComponent,
     MiniProjectsComponent,
     ProductsGalleryComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ButtonsComponent,
+    IconButtonComponent
   ],
   imports: [
     BrowserModule,
