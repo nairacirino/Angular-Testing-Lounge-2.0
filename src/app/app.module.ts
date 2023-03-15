@@ -10,6 +10,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
 
 //Components
 import { AppComponent } from './app.component';
@@ -34,6 +36,7 @@ import { ProductsGalleryComponent } from './components/mini-projects/products-ga
 import { ProductCardComponent } from './components/basic-components/cards/product-card/product-card.component';
 import { ButtonsComponent } from './components/basic-components/buttons/buttons.component';
 import { IconButtonComponent } from './components/basic-components/buttons/icon-button/icon-button.component';
+import { ClientsListComponent } from './components/mini-projects/clients-list/clients-list.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,8 @@ import { IconButtonComponent } from './components/basic-components/buttons/icon-
     ProductsGalleryComponent,
     ProductCardComponent,
     ButtonsComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    ClientsListComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,9 @@ import { IconButtonComponent } from './components/basic-components/buttons/icon-
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
