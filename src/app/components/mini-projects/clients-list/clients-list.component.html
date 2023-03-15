@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name" [(ngModel)]="name">
+        </mat-form-field>
+        <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="addClient()"></app-icon-button>
+    </mat-card-content>
+    <mat-list role="list" *ngIf="clients">
+        <mat-list-item role="listitem" *ngFor="let client of clients">{{client.name}}</mat-list-item>
+    </mat-list>
+</mat-card>
