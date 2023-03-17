@@ -8,27 +8,27 @@ import { Client } from './clients.model';
 })
 export class ClientsListComponent {
 
-name: string;
-clients: Client[] = [];
-showInput: boolean = false;
+  name: string;
+  clients: Client[] = [];
+  showInput: boolean = false;
 
-addClient() {
-  this.clients.push(
-    {name: this.name}
+  addClient() {
+    this.clients.push(
+      { name: this.name }
     );
-  this.name = "";
-}
+    this.name = "";
+  }
 
-openEdit() {
-  this.showInput = true;
-}
+  openEdit() {
+    this.showInput = true;
+  }
 
-editClient() {
+  saveEdit() {
+    this.showInput = false;
+  }
 
-}
-
-deleteClient(i:number) {
-  this.clients.splice(i, 1)
-}
+  deleteClient(i: number) {
+    this.clients.splice(i, 1)
+  }
 
 }
