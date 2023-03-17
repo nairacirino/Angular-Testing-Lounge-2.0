@@ -1,3 +1,4 @@
 export interface Client {
-    name: string
+    name: string,
+    onEdit: boolean
 }

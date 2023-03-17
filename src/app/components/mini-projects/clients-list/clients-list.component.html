@@ -8,13 +8,13 @@
     <mat-list role="list" *ngIf="clients.length > 0">
         <mat-list-item role="listitem" *ngFor="let client of clients, let i = index">
             {{client.name}}
-            <app-icon-button [icon]="'edit'" (sendClickEmitter)="openEdit()"></app-icon-button>
+            <app-icon-button [icon]="'edit'" (sendClickEmitter)="openEdit(i)"></app-icon-button>
             <app-icon-button [icon]="'delete'" (sendClickEmitter)="deleteClient(i)"></app-icon-button>
-            <ng-container *ngIf="showInput">
+            <ng-container *ngIf="client.onEdit">
                 <mat-form-field>
                     <input matInput type="text" placeholder="Name" [(ngModel)]="client.name">
                 </mat-form-field>
-                <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="saveEdit()"></app-icon-button>
+                <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="saveEdit(i)"></app-icon-button>
             </ng-container>
         </mat-list-item>
     </mat-list>

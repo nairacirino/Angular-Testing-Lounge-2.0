@@ -14,17 +14,19 @@ export class ClientsListComponent {
 
   addClient() {
     this.clients.push(
-      { name: this.name }
+      { name: this.name,
+        onEdit: false
+      }
     );
     this.name = "";
   }
 
-  openEdit() {
-    this.showInput = true;
+  openEdit(i: number) {
+    this.clients[i].onEdit = true;
   }
 
-  saveEdit() {
-    this.showInput = false;
+  saveEdit(i: number) {
+    this.clients[i].onEdit = false;
   }
 
   deleteClient(i: number) {
