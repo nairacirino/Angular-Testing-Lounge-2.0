@@ -5,16 +5,16 @@
         </mat-form-field>
         <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="addClient()"></app-icon-button>
     </mat-card-content>
-    <mat-list role="list" *ngIf="clients.length > 0">
+    <mat-list role="list" *ngIf="clients">
         <mat-list-item role="listitem" *ngFor="let client of clients, let i = index">
             {{client.name}}
-            <app-icon-button [icon]="'edit'" (sendClickEmitter)="openEdit(i)"></app-icon-button>
+            <app-icon-button [icon]="'edit'" (sendClickEmitter)="editClient(i, true)"></app-icon-button>
             <app-icon-button [icon]="'delete'" (sendClickEmitter)="deleteClient(i)"></app-icon-button>
             <ng-container *ngIf="client.onEdit">
                 <mat-form-field>
                     <input matInput type="text" placeholder="Name" [(ngModel)]="client.name">
                 </mat-form-field>
-                <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="saveEdit(i)"></app-icon-button>
+                <app-icon-button [icon]="'add_circle'" (sendClickEmitter)="editClient(i, false)"></app-icon-button>
             </ng-container>
         </mat-list-item>
     </mat-list>

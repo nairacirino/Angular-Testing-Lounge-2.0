@@ -21,12 +21,8 @@ export class ClientsListComponent {
     this.name = "";
   }
 
-  openEdit(i: number) {
-    this.clients[i].onEdit = true;
-  }
-
-  saveEdit(i: number) {
-    this.clients[i].onEdit = false;
+  editClient(i: number, boolean: boolean) {
+    this.clients[i].onEdit = boolean;
   }
 
   deleteClient(i: number) {
