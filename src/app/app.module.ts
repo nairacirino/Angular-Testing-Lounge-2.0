@@ -37,6 +37,8 @@ import { ProductCardComponent } from './components/basic-components/cards/produc
 import { ButtonsComponent } from './components/basic-components/buttons/buttons.component';
 import { IconButtonComponent } from './components/basic-components/buttons/icon-button/icon-button.component';
 import { ClientsListComponent } from './components/mini-projects/clients-list/clients-list.component';
+import { TemplateVariablesComponent } from './components/component-binders/template-variables/template-variables.component';
+import { TemplateVariablesChildComponent } from './components/component-binders/template-variables/template-variables-child/template-variables-child.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { ClientsListComponent } from './components/mini-projects/clients-list/cl
     ProductCardComponent,
     ButtonsComponent,
     IconButtonComponent,
-    ClientsListComponent
+    ClientsListComponent,
+    TemplateVariablesComponent,
+    TemplateVariablesChildComponent
   ],
   imports: [
     BrowserModule,
