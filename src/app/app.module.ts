@@ -39,6 +39,7 @@ import { IconButtonComponent } from './components/basic-components/buttons/icon-
 import { ClientsListComponent } from './components/mini-projects/clients-list/clients-list.component';
 import { TemplateVariablesComponent } from './components/component-binders/template-variables/template-variables.component';
 import { TemplateVariablesChildComponent } from './components/component-binders/template-variables/template-variables-child/template-variables-child.component';
+import { ViewChildComponent } from './components/component-binders/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { TemplateVariablesChildComponent } from './components/component-binders/
     IconButtonComponent,
     ClientsListComponent,
     TemplateVariablesComponent,
-    TemplateVariablesChildComponent
+    TemplateVariablesChildComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,

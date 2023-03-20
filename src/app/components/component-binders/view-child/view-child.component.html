@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-content>
+        <h3>Método 1: Usando o tipo de componente</h3>
+        <button mat-button color="primary" (click)="childComponent.childMethod()">Try Me</button>
+        <app-template-variables-child #childComponent></app-template-variables-child>
+        <mat-divider></mat-divider>
+        <h3>Método 2: Usando a template variable como identificador</h3>
+        <button mat-button color="primary" (click)="clickSecondButton()">Try Me</button>
+        <app-template-variables-child #childComponent2></app-template-variables-child>
+    </mat-card-content>
+</mat-card>
